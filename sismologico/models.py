@@ -7,7 +7,7 @@ class User(AbstractUser):
 
 class Sismo(models.Model):
     analista = models.CharField(max_length=8)
-    # user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='sismos_for_user')
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='sismos_for_user',default=1)
     custom_id  = models.CharField(max_length=12)
     fecha = models.DateField()
     hora = models.TimeField()

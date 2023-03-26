@@ -230,7 +230,7 @@ def validar_fecha(fecha,hora):
 
 def uploader(request):
     print(request,'datos')
-    user = User.objects.get(username="analista")
+    # user = User.objects.get(username="Analista")
     if request.headers['Token'] != get_secret('CUSTOM_TOKEN'):
         print('el token no coincide')
         return HttpResponse({'error':'El token no concuerda'})
